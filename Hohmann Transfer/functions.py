@@ -31,18 +31,18 @@ def get_mu(planet):
 
     return mu
 
-def TOF(a):
+def TOF(a, x):
     mu = get_mu('sun')
     TOF_sec = m.pi * m.sqrt((a ** 3)/ mu)
     if (TOF_sec > 86400):
         TOF_simp = TOF_sec / 86400
-        print("5) The total time necessary to complete this maneuver is:", TOF_simp, "days")
+        print(x, "The total time necessary to complete this maneuver is:", TOF_simp, "days")
     elif (TOF_sec > 3600):
         TOF_simp = TOF_sec / 3600
-        print("5) The total time necessary to complete this maneuver is:", TOF_simp, "hours")
+        print(x, "The total time necessary to complete this maneuver is:", TOF_simp, "hours")
     elif (TOF_sec > 60):
         TOF_simp = TOF_sec / 60
-        print("5) The total time necessary to complete this maneuver is:", TOF_simp, "minutes")
+        print(x, "The total time necessary to complete this maneuver is:", TOF_simp, "minutes")
     else:
-        print("5) The total time necessary to complete this maneuver is:", TOF_simp, "seconds")
+        print(x, "The total time necessary to complete this maneuver is:", TOF_sec, "seconds")
 

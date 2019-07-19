@@ -86,4 +86,4 @@ def transfer():
 
 def interplanetary():
     transfer()
-    functions.TOF(a)
+    functions.TOF(a, '6)')

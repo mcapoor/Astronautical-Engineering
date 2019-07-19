@@ -29,9 +29,6 @@ def in_plane():
     total_velocity_change = delta_v1 + delta_v2
 
     print()
-    print("The total change in velocity required to move from", altitude1, "km to", altitude2, "km is:")
-    print(total_velocity_change, "km/s")
+    print("The total change in velocity required to move from", altitude1, "km to", altitude2, "km is:", total_velocity_change, "km/s")
     print()
-    functions.TOF(a)
-
-
+    functions.TOF(a, '')
