@@ -3,7 +3,9 @@ import math as m
 
 def in_plane():
     planet = input("Which body are we starting from? ")
-            
+    if (planet == 'e'):
+        planet = 'earth'
+
     mu = functions.get_mu(planet)
 
     radii1 = functions.get_altitude1(planet)
@@ -14,7 +16,7 @@ def in_plane():
     altitude2 = radii2[0]
     r2 = radii2[1]
         
-    epsilon = -(mu / (r1 + r2))
+    epsilon = (mu / (r1 + r2))
 
     a = (r1 + r2) / 2
         
@@ -29,6 +31,7 @@ def in_plane():
     total_velocity_change = delta_v1 + delta_v2
 
     print()
+    print("Total Energy:", epsilon, "joules")
+    print("Orbital Velocity:", vcs2, "km/s")
     print("The total change in velocity required to move from", altitude1, "km to", altitude2, "km is:", total_velocity_change, "km/s")
-    print()
-    functions.TOF(a, '')
+    functions.TOF(a)
